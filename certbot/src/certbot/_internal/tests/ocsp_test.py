@@ -25,7 +25,7 @@ class OSCPTestCryptography(unittest.TestCase):
     """
 
     def setUp(self):
-        from certbot import ocsp
+        from certbot._internal import ocsp
         self.checker = ocsp.RevocationChecker()
         self.cert_path = test_util.vector_path('ocsp_certificate.pem')
         self.chain_path = test_util.vector_path('ocsp_issuer_certificate.pem')

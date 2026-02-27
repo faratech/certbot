@@ -4,6 +4,7 @@ from datetime import timedelta
 from datetime import timezone
 import logging
 from typing import Optional
+import warnings
 
 from cryptography import x509
 from cryptography.exceptions import InvalidSignature
@@ -18,6 +19,8 @@ from certbot import crypto_util
 from certbot import errors
 from certbot.interfaces import RenewableCert
 
+warnings.warn("certbot.ocsp is deprecated and will be removed in the next major"
+              " release", DeprecationWarning, stacklevel=2)
 logger = logging.getLogger(__name__)
 
 
